@@ -47,6 +47,68 @@
 .wheel-col{display:flex;flex-direction:column;align-items:center;gap:14px}.wheel{width:100%;max-width:520px;height:auto;display:block;overflow:visible;touch-action:manipulation}.wheel .ring{transform-origin:260px 260px;transform:rotate(var(--rot,0deg))}.wheel.ready .ring{transition:transform .8s cubic-bezier(.25,.8,.25,1)}.wheel .lab{transform-box:fill-box;transform-origin:center;transform:rotate(calc(var(--rot,0deg) * -1));font:700 19px var(--font);fill:var(--ink);pointer-events:none}.wheel.ready .lab{transition:transform .8s cubic-bezier(.25,.8,.25,1)}.seg{outline:none;cursor:pointer;transform-origin:260px 260px;transform:scale(var(--k,1))}.wheel.ready .seg{transition:transform .45s cubic-bezier(.25,.8,.25,1)}.seg .shape{fill:color-mix(in srgb,var(--c) 18%,var(--paper));stroke:var(--paper);stroke-width:1.5;transition:fill .2s}.seg:hover .shape{fill:color-mix(in srgb,var(--c) 38%,var(--paper))}.seg[aria-checked="true"] .shape{fill:var(--c)}.seg[aria-checked="true"] .lab{fill:var(--on)}.seg:focus-visible .shape{stroke:var(--ink);stroke-width:3.5}.s0{--c:var(--spring);--on:var(--on-spring)}.s1{--c:var(--summer);--on:var(--on-summer)}.s2{--c:var(--autumn);--on:var(--on-autumn)}.s3{--c:var(--winter);--on:var(--on-winter)}.wheel .today{fill:var(--paper);stroke:var(--ink);stroke-width:2.5;pointer-events:none}.wheel .notch{fill:var(--ink)}.wheel .c-ring{fill:none;stroke:var(--line);stroke-width:1.5;stroke-dasharray:2 6;stroke-linecap:round}.wheel .c-name{font:900 54px var(--font);fill:var(--ink);text-anchor:middle}.wheel .c-date{font:500 17px var(--font);fill:var(--ink-2);text-anchor:middle}.wheel .c-today{font:500 14.5px var(--font);fill:var(--ink-2);text-anchor:middle}.wheel .c-sep{stroke:var(--line);stroke-width:1.5;stroke-linecap:round;fill:none}.wheel .c-fest-bg{fill:var(--ink)}.wheel .c-fest{font:700 15px var(--font);fill:var(--paper);text-anchor:middle;dominant-baseline:central}.wheel-col{width:100%;max-width:380px;gap:16px}.wheel{max-width:380px}.seasons{display:flex;gap:8px;width:100%}.sbtn{flex:1;appearance:none;padding:8px 0;border:1.5px solid var(--line);border-radius:8px;background:transparent;color:var(--ink-2);font:inherit;font-weight:700;cursor:pointer;line-height:1.5}.sbtn:hover{border-color:var(--c);color:var(--ink)}.sbtn[aria-pressed="true"]{background:var(--c);border-color:var(--c);color:var(--on)}.sbtn.cur::after{content:"";display:inline-block;width:6px;height:6px;margin-left:6px;border-radius:50%;background:currentColor;vertical-align:middle}.wheel .lab{font:700 26px var(--font)}.wheel .c-name{font:900 52px var(--font)}.wheel .c-date{font:500 20px var(--font)}.wheel .c-today{font:500 19px var(--font)}.wheel .c-fest{font:700 17px var(--font)}.wheel .ring.in{animation:ringIn .45s ease both}
 .wheel{display:block;width:100%;height:auto;overflow:visible}.wheel .lab{font-family:var(--font)}.wheel .c-name{font-family:var(--serif)}
 .qh{fill:none;stroke:var(--por);stroke-width:1.2;opacity:.55}.qh2{stroke-dasharray:1.5 7;stroke-linecap:round;stroke-width:2.2;opacity:.7}
+
+/* === Non-map design polish: safe visual layer; map geometry/data/scripts intentionally untouched === */
+:root{scroll-padding-top:88px}
+#nav{backdrop-filter:saturate(1.12) blur(12px);-webkit-backdrop-filter:saturate(1.12) blur(12px)}
+#nav nav a{position:relative;padding:9px 12px;border-radius:999px;transition:background .22s,color .22s}
+#nav nav a:hover,#nav nav a.cur{background:color-mix(in srgb,var(--green) 10%,transparent)}
+.sec{position:relative;isolation:isolate}
+.sec>.in> .kick{display:inline-flex;align-items:center;gap:10px}
+.sec>.in> .kick::before{content:"";display:inline-block;width:24px;height:1px;background:currentColor;opacity:.7}
+.sec h2.t{letter-spacing:-.025em;text-wrap:balance}
+.sec .lead{font-size:1rem;line-height:1.85;text-wrap:pretty}
+#industry .strip{padding-top:18px;padding-bottom:28px}
+.ic{position:relative;overflow:hidden;box-shadow:0 3px 14px rgba(30,50,35,.035)}
+.ic::after{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--c);opacity:0;transform:scaleX(.45);transform-origin:left;transition:opacity .25s,transform .25s}
+.ic:hover::after,.ic[aria-selected="true"]::after{opacity:1;transform:scaleX(1)}
+.ic .mm{align-items:center;border-radius:10px;background:color-mix(in srgb,var(--c) 7%,var(--card));padding:8px;margin-bottom:8px}
+.ic p{line-height:1.8}
+#idet{box-shadow:0 16px 42px rgba(31,61,43,.055)}
+#idet .top{align-items:start}
+#idet .blocks>div{padding:15px;border:1px solid var(--line);border-radius:10px;background:color-mix(in srgb,var(--c) 3%,var(--card))}
+#idet .blocks h4{line-height:1.5}
+#idet .dact .btn{min-height:42px}
+#solar .sgrid{align-items:start}
+#solar .term-panel{padding:clamp(20px,3vw,34px);border:1px solid color-mix(in srgb,var(--line) 75%,transparent);border-radius:18px;background:color-mix(in srgb,var(--card) 76%,transparent);box-shadow:0 12px 36px rgba(31,61,43,.035)}
+#solar .tp-blocks section{padding:15px 0}
+#solar .tp-blocks p{line-height:1.85}
+#research .rt{min-height:62px;transition:transform .2s,border-color .2s,background .2s,box-shadow .2s}
+#research .rt:hover{transform:translateY(-2px)}
+#research .rgrid{box-shadow:0 16px 42px rgba(31,61,43,.045)}
+#research #tp .rowx{line-height:1.8}
+#research #tp .dnote{line-height:1.75}
+#end{position:relative;overflow:hidden}
+#end::before,#end::after{content:"";position:absolute;width:260px;height:260px;border:1px solid rgba(230,188,76,.18);border-radius:50%;pointer-events:none}
+#end::before{top:-170px;left:-110px;box-shadow:0 0 0 18px rgba(230,188,76,.025),0 0 0 42px rgba(230,188,76,.02)}
+#end::after{right:-140px;bottom:-180px;box-shadow:0 0 0 18px rgba(230,188,76,.025),0 0 0 42px rgba(230,188,76,.02)}
+#end>.in{position:relative;z-index:1}
+.ents{gap:14px}
+.ent{position:relative;min-height:126px;display:flex;flex-direction:column;justify-content:space-between;gap:12px;transition:border-color .25s,background .25s,transform .25s}
+.ent:hover{border-color:rgba(230,188,76,.65)}
+.ent b{line-height:1.45}
+.ent small{line-height:1.65}
+.btn:focus-visible,.ar:focus-visible,.ic:focus-visible,.rt:focus-visible,.ent:focus-visible,#nav nav a:focus-visible,.chp:focus-visible,.sbtn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+button{ -webkit-tap-highlight-color:transparent }
+@media(max-width:1000px){
+  #idet .top{grid-template-columns:1fr}
+  #idet .blocks{grid-template-columns:1fr}
+  #solar .term-panel{padding:22px}
+  #research #tm svg{height:auto;max-height:440px}
+}
+@media(max-width:640px){
+  .sec{padding-top:64px;padding-bottom:64px}
+  #nav nav a{padding:7px 9px}
+  #idet{padding:20px}
+  #idet .blocks>div{padding:13px}
+  #solar .term-panel{padding:18px}
+  #end .ents{gap:10px}
+  #end .ent{min-height:112px;padding:16px 13px}
+}
+@media(prefers-reduced-motion:reduce){
+  #nav nav a,.ic,.ic::after,.rt,.ent{transition:none}
+}
+
 </style></head><body>
 <header id="nav"><a class="brand" href="#map"><i>赣</i>赣鄱知农</a><nav aria-label="首页导航"><a href="#map" data-s="map">江西农业全貌</a><a href="#industry" data-s="industry">特色农业</a><a href="#solar" data-s="solar">节气与农事</a><a href="#research" data-s="research">科研与未来</a></nav></header>
 <section id="map" aria-label="江西农业全貌"><div class="pin">
