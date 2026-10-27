@@ -125,14 +125,14 @@ button{ -webkit-tap-highlight-color:transparent }
 <button id="skip" type="button">跳过开场</button><button id="replay" type="button">重新观看开场</button>
 <section id="industry" class="sec"><div class="in">
  <p class="kick">02　江西特色农业</p><h2 class="t">从一张地图，走进六种江西农业</h2>
- <p class="lead">按江西农业的代表性排列。拖动卡片或点击箭头浏览，点选一张卡片，在下方查看它的产区、特点与地方文化。</p>
+ <p class="lead">从稻田、茶山到果园与湖库，江西农业因地形、水土与农时而各具面貌。选择一项产业，查看主要产区、生产特点与地方生活；地图用于呈现产区概况，具体统计数据以核验后的公开资料为准。</p>
  <div class="strip" id="strip" role="tablist" aria-label="特色农业卡片"></div>
  <div class="ctl"><button class="ar" id="pv" type="button" aria-label="上一张">‹</button><button class="ar" id="nx" type="button" aria-label="下一张">›</button><span>可鼠标拖动，也可点击箭头</span></div>
  <div id="idet" aria-live="polite"></div>
 </div></section>
 <section id="solar" class="sec"><div class="in">
  <p class="kick">03　节气与农事生活</p><h2 class="t">作物有自己的时钟，农人读懂四时的信</h2>
- <p class="lead">默认定位到当前节气。点选其他节气，轮盘转动并切换信息；农事为主，文化为辅，地区仅在有代表性时标注。</p>
+ <p class="lead">跟随当前节气进入江西一年的农事节奏。点选节气，查看当令农事、地方生产生活与科技助农思路；不同地区的农时会随天气、海拔和品种变化，内容作为生产知识参考。</p>
  <div class="sgrid"><div class="wcol"><div class="seasons" id="seasons" role="group" aria-label="选择季节"></div><svg class="wheel" id="wheel" viewBox="0 -18 520 538" role="radiogroup" aria-label="本季节气轮，用左右方向键切换">
             <path class="notch" d="M249 -16 L271 -16 L260 -2 Z"/>
             <circle class="qh" cx="260" cy="260" r="254"/><circle class="qh qh2" cx="260" cy="260" r="248"/><g class="ring" id="ring"></g>
@@ -149,11 +149,11 @@ button{ -webkit-tap-highlight-color:transparent }
 </div></section>
 <section id="research" class="sec"><div class="in">
  <p class="kick">04　江农科研与农业未来</p><h2 class="t">从田野里的问题，到实验室里的答案</h2>
- <p class="lead">选择一个农业场景，了解相关技术、江西农业大学的研究，以及它对生产的价值。首页只呈现 3 个代表场景，完整领域进入科研专题。</p>
+ <p class="lead">从真实农业生产中的问题出发，了解相关技术思路及其可能带来的生产价值。当前展示的是种业、稻作与果园三个场景线索；具体项目、团队和应用成效将在核验学校官方资料后进一步完善。</p>
  <div class="rtabs" id="rtabs" role="tablist" aria-label="农业场景"></div>
  <div class="rgrid"><div id="tm"></div><div id="tp"></div></div>
 </div></section>
-<section id="end"><h2>赣鄱沃野，生生不息</h2><p class="lead">从一方水土孕育的农业特色，到四时流转中的农耕智慧，再到科技赋能的农业未来。</p>
+<section id="end"><h2>赣鄱沃野，生生不息</h2><p class="lead">从认识江西的农业版图，到读懂四时农事，再到关注农业科技如何回应生产需求。沿着感兴趣的线索继续探索，让每一片田野背后的故事都有入口。</p>
  <div class="ents"><a class="ent" href="#map"><i>01</i><b>江西农业地图</b><small>水系、市界与代表性农业</small></a><a class="ent" href="#industry"><i>02</i><b>特色农业</b><small>六种产业与产区</small></a><a class="ent" href="#solar"><i>03</i><b>节气与农事</b><small>二十四节气轮</small></a><a class="ent" href="#research"><i>04</i><b>江农科研与农业未来</b><small>场景、技术与成果</small></a></div>
  <p class="foot">赣鄱知农　江西农业大学农业宣传　　示意页面：边界数据来自 DataV.GeoAtlas，水系来自 OpenStreetMap / Natural Earth；公开发布请使用带审图号的标准地图，科研内容以学校官方资料为准。</p></section>
 <div id="dm" role="dialog" aria-modal="true" aria-label="特色农业详情"></div><div id="toast" role="status"></div>
